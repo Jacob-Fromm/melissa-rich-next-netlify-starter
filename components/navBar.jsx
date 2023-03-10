@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import NavItem from "./navItem";
 
+
 const MENU_LIST = [
   { text: "HOME", href: "/" },
   { text: "BIO", href: "/bio" },

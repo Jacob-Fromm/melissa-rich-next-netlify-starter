@@ -106,6 +106,26 @@ body {
   font-family: 'condor';
 }
 
+.navbar
+
+// every-layout layouts
+stack-l {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+stack-l > * + * {
+  margin-block-start: var(--s1);
+}
+
+center-l {
+  display: block;
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: var(--measure);
+}
+
 a {
   color: $melissa-pink;
   text-decoration: none;

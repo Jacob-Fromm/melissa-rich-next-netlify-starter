@@ -5,4 +5,7 @@ import press from './press'
 import podcast from './podcast'
 import gallery from './gallery'
 import heroPhotos from './heroPhotos'
-export const schemaTypes = [project, photo, bio, press, podcast, gallery, heroPhotos]
+import event from './event'
+import venue from './venue'
+import organizer from './organizer'
+export const schemaTypes = [project, photo, bio, press, podcast, gallery, heroPhotos, event, venue, organizer]

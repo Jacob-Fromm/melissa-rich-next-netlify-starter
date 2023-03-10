@@ -13,12 +13,15 @@ export default function IndexPage({ heroPhotos }) {
     <div
       className="appContainer"
       style={{
-        height: "100vh",
+        height: "80vh",
         width: "100vw",
+        display: "flex",
+        flexDirection: "column",
+        marginTop: "5em",
         // backgroundColor: "black",
         // backgroundColor: "red",
         backgroundImage: `urlFor(heroPhotos[0].images[0]).auto("format").fit("fill").url()}
-          style={{ height: '100vh' }`,
+          style={{ height: '90vh' }`,
       }}
     >
       <header>
@@ -36,7 +39,7 @@ export default function IndexPage({ heroPhotos }) {
         ></div>
         <img
           src={urlFor(heroPhotos[0].images[0]).auto("format").fit("fill").url()}
-          style={{ height: `100vh` }}
+          style={{ height: `90vh` }}
         />
       </main>
     </div>

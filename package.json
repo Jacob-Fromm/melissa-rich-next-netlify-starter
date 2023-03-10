@@ -10,12 +10,18 @@
   "dependencies": {
     "@portabletext/react": "^2.0.2",
     "@sanity/image-url": "^1.0.2",
+    "@webcomponents/webcomponentsjs": "^2.7.0",
     "cypress": "^10.0.3",
+    "every-layout": "^1.0.6",
     "next": "^13.0.0",
     "next-sanity": "^4.1.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-helmet": "^6.1.0",
-    "sass": "^1.58.3"
+    "sass": "^1.58.3",
+    "styled-components": "^5.3.8"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.4"
   }
 }
