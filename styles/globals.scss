@@ -1,4 +1,5 @@
-$melissa-pink: #e02cac;
+$melissa-pink: rgb(224, 44, 172);
+$secondary-color: gold;
 // @use "./Stack.css";
 
 root {
@@ -430,9 +431,10 @@ img {
 
 .bio-text {
   color: white;
+  a {
+    color: $secondary-color;
+  }
   text-align: end;
-  width: 50rem;
-  float: right;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -440,16 +442,15 @@ img {
   p {
     font-size: 20px;
     padding: 0.25em;
-    width: 80%;
-    float: right;
+    position: relative;
   }
 }
 
 .bio-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  padding-right: 10rem;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: right;
+  // padding-right: 10rem;
 
   h2 {
     align-self: flex-end;
@@ -459,8 +460,19 @@ img {
 }
 
 .bio-text-container {
-  // background-color: black;
-  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: right;
+  left: 45%;
+  top: 10%;
+  width: 50%;
+  background-color: rgba(224, 44, 172, 0.75);
+  padding: 2em;
+  transition: 0.3s;
+  &:hover {
+    background-color: $melissa-pink;
+  }
 }
 
 .simpleNav {

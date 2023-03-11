@@ -10,7 +10,7 @@ export default function Bio({ bio }) {
     <div
       className="bio-container"
       style={{
-        height: `90vh`,
+        height: `100vh`,
         width: `100vw`,
         backgroundImage: `url(${bioBackgroundImage})`,
         backgroundPosition: "center",
