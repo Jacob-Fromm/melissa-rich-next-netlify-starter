@@ -4,15 +4,12 @@ import Center from "../components/Center.js";
 
 export default function Events() {
   return (
-    <center-l>
-
-    <stack-l>
+    <div>
       <p>events page</p>
       <p>events page</p>
       <p>events page</p>
       <p>events page</p>
       <p>events page</p>
-    </stack-l>
-    </center-l>
+    </div>
   );
 }
