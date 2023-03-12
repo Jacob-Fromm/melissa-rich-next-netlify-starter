@@ -24,6 +24,9 @@ export default function IndexPage({ heroPhotos }) {
           style={{ height: '90vh' }`,
       }}
     >
+      <div className="background-canvas">
+        <div className="background-overlay"></div>
+      </div>
       <header>
         <h1>Melissa Rich NYC</h1>
       </header>

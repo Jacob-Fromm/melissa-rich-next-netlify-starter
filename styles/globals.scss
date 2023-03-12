@@ -384,6 +384,51 @@ h2 {
   color: white;
 }
 
+.background-container {
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  column-count: 5;
+  // column-gap: 0.25em;
+  margin: 1em;
+  h1 {
+    color: white;
+    font-style: italic;
+    font-size: xx-large;
+  }
+}
+
+.background-canvas {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-image: url("../assets/text-background.png");
+}
+
+.background-overlay {
+  background: linear-gradient(-45deg, $secondary-color, $melissa-pink);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  height: 100vh;
+  mix-blend-mode: darken;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.pink-text h1 {
+  color: rgb(224, 44, 172);
+}
+
 .container {
   padding: 0 1em;
   margin: 2em;
