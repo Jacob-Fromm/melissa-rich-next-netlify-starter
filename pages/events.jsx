@@ -1,6 +1,4 @@
 import React from "react";
-import Stack from "../components/Stack";
-import Center from "../components/Center.js";
 
 export default function Events() {
   return (
