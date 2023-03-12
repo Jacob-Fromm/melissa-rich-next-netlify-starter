@@ -37,10 +37,15 @@ export default function IndexPage({ heroPhotos }) {
             justifyContent: "center",
           }}
         ></div>
-        <img
-          src={urlFor(heroPhotos[0].images[0]).auto("format").fit("fill").url()}
-          style={{ height: `90vh` }}
-        />
+        <div style={{ position: `relative`, textAlign: `center` }}>
+          <img
+            src={urlFor(heroPhotos[0].images[0])
+              .auto("format")
+              .fit("fill")
+              .url()}
+            style={{ height: `90vh` }}
+          />
+        </div>
       </main>
     </div>
   );
