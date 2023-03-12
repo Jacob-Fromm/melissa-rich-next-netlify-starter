@@ -388,45 +388,47 @@ h2 {
   padding: 0 1em;
   margin: 2em;
   max-width: 80%;
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
-}
-
-.project-card {
-  margin: 1em;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
-  max-width: 75%;
-  transition: 0.5s;
-  max-height: 30em;
-  gap: 1em;
-  &:hover {
-    background-color: $melissa-pink;
-  }
-  // p {
-  //   padding: 1em 0;
+  // ul {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: flex-start;
   // }
-  img {
-    max-width: 50%;
-    object-fit: contain;
-    // max-height: 20rem;
-  }
 }
 
-.project-title-and-description {
-  gap: 1em;
+.project-card-container {
   display: flex;
   flex-direction: column;
 }
 
-img {
-  display: block;
-  max-width: 100%;
+.project-card {
+  width: 100%;
+  margin: 1em;
+  display: flex;
+  flex-direction: row;
+  transition: 0.5s;
+  max-height: 30em;
+  justify-content: space-between;
+  gap: 1em;
+  &:hover {
+    background-color: $melissa-pink;
+  }
+  h2 {
+    padding-bottom: 1.5em;
+  }
+  img {
+    object-fit: contain;
+    max-width: 25%;
+  }
+}
+
+.project-title-and-description {
+  text-align: left;
+  max-width: 60%;
+  align-self: flex-start;
 }
 
 .bio-text {
@@ -434,15 +436,9 @@ img {
   a {
     color: $secondary-color;
   }
-  text-align: end;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-
   p {
     font-size: 20px;
     padding: 0.25em;
-    position: relative;
   }
 }
 
@@ -465,7 +461,7 @@ img {
   position: relative;
   text-align: right;
   left: 45%;
-  top: 10%;
+  top: 20%;
   width: 50%;
   background-color: rgba(224, 44, 172, 0.75);
   padding: 2em;
@@ -486,7 +482,6 @@ nav {
   padding: 16px;
   justify-content: center;
   align-items: center;
-  background-color: #000000;
 }
 
 .nav__menu-bar {
@@ -499,7 +494,6 @@ nav {
 .nav__menu-bar div {
   width: 40px;
   height: 4px;
-  background-color: black;
   border-radius: 2px;
 }
 
@@ -514,7 +508,6 @@ nav {
   padding: 24px 16px;
   transition: all 0.2s;
   min-height: calc(100vh - 60px);
-  background-color: #000000;
 }
 
 .nav__menu-list.active {
@@ -530,6 +523,7 @@ nav {
 
 .nav__item:hover {
   font-weight: bold;
+  transition: 0.3s;
 }
 
 .nav__item {

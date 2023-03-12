@@ -3,7 +3,6 @@ import Image from "next/image";
 import React, { useState } from "react";
 import NavItem from "./navItem";
 
-
 const MENU_LIST = [
   { text: "HOME", href: "/" },
   { text: "BIO", href: "/bio" },
@@ -27,11 +26,7 @@ const NavBar = () => {
         <div
           onClick={() => setNavActive(!navActive)}
           className={`nav__menu-bar`}
-        >
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+        ></div>
         <div className={`${navActive ? "active" : ""} nav__menu-list`}>
           {MENU_LIST.map((menu, idx) => (
             <div

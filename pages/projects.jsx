@@ -13,14 +13,14 @@ export default function Projects({ projects }) {
       <main>
         <div className="container">
           {projects.length > 0 && (
-            <ul>
+            <ul className="project-card-container">
               {projects.map((project) => (
                 <li className="project-card" key={project._id}>
-                  <img src={urlFor(project.mainImage).auto("format").url()} />
                   <div className="project-title-and-description">
                     <h2>{project?.title}</h2>
                     <p>{project?.description}</p>
                   </div>
+                  <img src={urlFor(project.mainImage).auto("format").url()} />
                   {/* <BuiltImage imageData={project.mainImage} /> */}
                 </li>
               ))}
