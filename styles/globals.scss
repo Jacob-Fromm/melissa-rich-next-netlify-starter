@@ -376,16 +376,17 @@ h2 {
 }
 
 .appContainer {
+  // height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   //  background-color: black;
   color: white;
 }
 
 .background-container {
-  height: 100vh;
+  // height: 100vh;
   width: 100vw;
   background: black;
   column-count: 5;
@@ -399,7 +400,7 @@ h2 {
 }
 
 .background-canvas {
-  height: 100vh;
+  // height: 100vh;
   width: 100vw;
   position: absolute;
   background-image: url("../assets/text-background.png");
@@ -409,7 +410,7 @@ h2 {
   background: linear-gradient(-45deg, $secondary-color, $melissa-pink);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
-  height: 100vh;
+  height: 90vh;
   mix-blend-mode: darken;
 }
 
@@ -461,7 +462,13 @@ h2 {
   &:hover {
     background-color: $melissa-pink;
   }
-  h2 {
+  h2.project-title {
+    padding-bottom: 1.5em;
+  }
+  #event-title {
+    padding-bottom: 0.5em;
+  }
+  #event-date {
     padding-bottom: 1.5em;
   }
   img {
@@ -612,6 +619,15 @@ nav {
   }
 }
 
+.events-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card {
+  border: 1px dotted $melissa-pink;
+  width: fit-content;
+}
 // every-layout layouts
 .stack {
   display: flex;

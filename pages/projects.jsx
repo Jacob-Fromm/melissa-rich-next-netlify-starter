@@ -17,7 +17,7 @@ export default function Projects({ projects }) {
               {projects.map((project) => (
                 <li className="project-card" key={project._id}>
                   <div className="project-title-and-description">
-                    <h2>{project?.title}</h2>
+                    <h2 className="project-title">{project?.title}</h2>
                     <p>{project?.description}</p>
                   </div>
                   <img src={urlFor(project.mainImage).auto("format").url()} />
@@ -27,11 +27,8 @@ export default function Projects({ projects }) {
             </ul>
           )}
           {!projects.length > 0 && <p>No projects to show</p>}
-          {projects.length > 0 && (
-            <div>
-              <pre>{JSON.stringify(projects, null, 2)}</pre>
-            </div>
-          )}
+          {projects.length > 0 &&
+            console.log(JSON.stringify(projects, null, 2))}
           {!projects.length > 0 && (
             <div>
               <div>¯\_(ツ)_/¯</div>

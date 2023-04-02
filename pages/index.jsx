@@ -21,15 +21,15 @@ export default function IndexPage({ heroPhotos }) {
         // backgroundColor: "black",
         // backgroundColor: "red",
         backgroundImage: `urlFor(heroPhotos[0].images[0]).auto("format").fit("fill").url()}
-          style={{ height: '90vh' }`,
+          style={{ height: '50vh' }`,
       }}
     >
       <div className="background-canvas">
         <div className="background-overlay"></div>
       </div>
-      <header>
+      {/* <header>
         <h1>Melissa Rich NYC</h1>
-      </header>
+      </header> */}
       <main>
         <div
           className="simpleNav"
@@ -46,7 +46,7 @@ export default function IndexPage({ heroPhotos }) {
               .auto("format")
               .fit("fill")
               .url()}
-            style={{ height: `90vh` }}
+            style={{ height: `80vh`, marginTop: `3.5rem` }}
           />
         </div>
       </main>
