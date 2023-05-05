@@ -19,6 +19,7 @@ export default function Writing({ sanityArticles }) {
                   padding: `1em`,
                   border: `1px solid blue`,
                   backgroundColor: `limegreen`,
+                  width: `50vw`,
                 }}
               >
                 <Link href={article.url}>
