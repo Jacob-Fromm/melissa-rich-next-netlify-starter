@@ -1,3 +1,5 @@
+import {format, parseISO} from 'date-fns'
+
 export default {
   name: 'event',
   title: 'Event',
@@ -14,8 +16,10 @@ export default {
       name: 'date',
       title: 'Date',
       type: 'date',
-      dateFormat: 'MMMM Do, YYYY',
       validation: (Rule) => Rule.required(),
+      options: {
+        dateFormat: 'MMMM D, YYYY',
+      },
     },
     {
       name: 'venue',

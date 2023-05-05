@@ -8,4 +8,17 @@ import heroPhotos from './heroPhotos'
 import event from './event'
 import venue from './venue'
 import organizer from './organizer'
-export const schemaTypes = [project, photo, bio, press, podcast, gallery, heroPhotos, event, venue, organizer]
+import writingNylon from './writingNylon'
+export const schemaTypes = [
+  project,
+  photo,
+  bio,
+  press,
+  podcast,
+  gallery,
+  heroPhotos,
+  event,
+  venue,
+  organizer,
+  writingNylon,
+]

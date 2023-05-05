@@ -409,7 +409,7 @@ h2 {
 .background-overlay {
   background: linear-gradient(-45deg, $secondary-color, $melissa-pink);
   background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
+  animation: gradient 2s ease infinite;
   height: 90vh;
   mix-blend-mode: darken;
 }
@@ -483,6 +483,9 @@ h2 {
   }
   #event-date {
     padding-bottom: 1.5em;
+  }
+  #event-venue {
+    color: white;
   }
   img {
     object-fit: contain;
