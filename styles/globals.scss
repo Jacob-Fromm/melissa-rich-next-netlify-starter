@@ -639,13 +639,14 @@ nav {
 #lightbox {
   width: 100vw;
   height: 100vh;
-  background-color: white;
+  background-color: hsl(0, 0%, 95%);
   position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  padding-top: 1em;
   img {
     width: auto;
     max-width: 90%;
@@ -659,12 +660,11 @@ nav {
   // top: 1em;
   // right: 1em;
   border: none;
-  background-color: white;
+
   transition: 0.3s;
   cursor: pointer;
   &:hover {
-    background-color: #ddd;
-    border-radius: 0.25em;
+    border-radius: 1em;
   }
 }
 .arrow-buttons {
@@ -687,6 +687,19 @@ nav {
   &:hover {
     background-color: white;
     transform: translateX(1rem);
+  }
+}
+#escape-button {
+  position: absolute;
+  top: 8em;
+  right: 1em;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 1em;
+
+  &:hover {
+    background-color: white;
+    scale: 110%;
   }
 }
 

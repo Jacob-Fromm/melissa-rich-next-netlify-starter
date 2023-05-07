@@ -48,14 +48,9 @@ export default function MasonryImageGallery({ gallery }) {
       {modal && (
         <>
           <button
+            id="escape-button"
             onClick={() => imgAction("escape")}
             className="lightbox-buttons"
-            style={{
-              position: "absolute",
-              top: "1em",
-              right: "1em",
-              cursor: "pointer",
-            }}
           >
             x
           </button>
