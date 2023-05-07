@@ -30,7 +30,7 @@ export default function Writing({ sanityArticles }) {
                     alt=""
                   />
                   <p>{article.tagline}</p>
-                  <p>{article.publicationDate}</p>
+                  <p>{transformDate(article.publicationDate)}</p>
                 </Link>
               </div>
             </>
@@ -58,20 +58,29 @@ const callNewArticles = () => {
       });
       return transaction.commit();
     });
-
-  const transformNylonData = (article) => {
-    return {
-      _id: `imported-article-${article.id}`,
-      _type: "writingNylon",
-      title: article.title,
-      tagline: article.content_text,
-      image: article.image,
-      url: article.url,
-      publicationDate: article.date_published,
-    };
+};
+const transformNylonData = (article) => {
+  return {
+    _id: `imported-article-${article.id}`,
+    _type: "writingNylon",
+    title: article.title,
+    tagline: article.content_text,
+    image: article.image,
+    url: article.url,
+    publicationDate: article.date_published,
   };
 };
 
+const transformDate = (datetime) => {
+  let options = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+
+  let date = new Date(datetime);
+  return date.toLocaleDateString("en-US", options);
+};
 export async function getStaticProps() {
   const sanityArticles = await client.fetch(`*[_type == "writingNylon"]`);
 

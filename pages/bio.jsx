@@ -24,6 +24,7 @@ export default function Bio({ bio }) {
           <div className="bio-text">
             <PortableText className="bio-text-text" value={bio[0].fullBio} />
           </div>
+          <img src="assets/envelope.jpg" alt="" />
           {/* <img src={urlFor(bio[0].photo).auto("format").fit("fill").url()}
           style={{ height: `100vh` }}/> */}
         </div>

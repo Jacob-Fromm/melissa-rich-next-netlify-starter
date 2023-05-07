@@ -87,6 +87,7 @@ h2 {
   font-style: italic;
   font-weight: 400;
   font-stretch: normal;
+  opacity: 90%;
 }
 
 @font-face {
@@ -633,6 +634,64 @@ nav {
   .nav__link:hover:before {
     width: 100%;
   }
+}
+
+#lightbox {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  img {
+    width: auto;
+    max-width: 90%;
+    max-height: 75%;
+    position: relative;
+    bottom: 10%;
+  }
+}
+.lightbox-buttons {
+  // position: absolute;
+  // top: 1em;
+  // right: 1em;
+  border: none;
+  background-color: white;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    background-color: #ddd;
+    border-radius: 0.25em;
+  }
+}
+.arrow-buttons {
+  // padding-left: 5em;
+  // padding-right: 5em;
+  position: relative;
+  bottom: 10%;
+  transition: ease 0.3s;
+  width: 100%;
+  height: 75%;
+}
+
+#prev-button {
+  &:hover {
+    background-color: white;
+    transform: translateX(-1rem);
+  }
+}
+#next-button {
+  &:hover {
+    background-color: white;
+    transform: translateX(1rem);
+  }
+}
+
+.masonry-container {
+  padding: 0.5rem;
 }
 
 .events-container {

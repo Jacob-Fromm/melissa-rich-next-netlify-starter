@@ -10,6 +10,7 @@ const MENU_LIST = [
   { text: "PODCAST", href: "/podcast" },
   { text: "PROJECTS", href: "/projects" },
   { text: "WRITING", href: "/writing" },
+  { text: "MEDIA", href: "/media" },
 ];
 const NavBar = () => {
   const [navActive, setNavActive] = useState(null);
