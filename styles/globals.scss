@@ -724,6 +724,13 @@ nav {
   border: 1px dotted $melissa-pink;
   width: fit-content;
 }
+
+.writing-container {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 40vw 40vw;
+  grid-gap: 0.5rem;
+}
 // every-layout layouts
 .stack {
   display: flex;

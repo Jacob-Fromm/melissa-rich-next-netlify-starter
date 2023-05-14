@@ -5,41 +5,52 @@ export default function Writing({ sanityArticles }) {
   callNewArticles();
   console.log("sanity articles in writing page :", sanityArticles);
   return (
-    <>
+    <div
+      style={{
+        display: `flex`,
+        flexDirection: `column`,
+        justifyItems: `center`,
+      }}
+    >
       <h1>articles</h1>
-      {sanityArticles ? (
-        sanityArticles.map((article) => {
-          return (
-            <>
-              <div
-                style={{
-                  display: `flex`,
-                  flexDirection: `column`,
-                  margin: `1em`,
-                  padding: `1em`,
-                  border: `1px solid blue`,
-                  backgroundColor: `limegreen`,
-                  width: `50vw`,
-                }}
-              >
-                <Link href={article.url}>
-                  <h2>{article.title}</h2>
-                  <img
-                    style={{ maxWidth: `100%` }}
-                    src={article.image}
-                    alt=""
-                  />
-                  <p>{article.tagline}</p>
-                  <p>{transformDate(article.publicationDate)}</p>
-                </Link>
-              </div>
-            </>
-          );
-        })
-      ) : (
-        <h2>no articles to show</h2>
-      )}
-    </>
+      <div className="writing-container">
+        {sanityArticles ? (
+          sanityArticles.map((article) => {
+            return (
+              <>
+                <div
+                  className="writing-item"
+                  style={{
+                    display: `flex`,
+                    flexDirection: `column`,
+                    marginLeft: `1em`,
+                    marginRight: `1em`,
+                    padding: `1em`,
+                    border: `1px solid blue`,
+                    backgroundColor: `limegreen`,
+                    width: `40vw`,
+                    justifyContent: `flex-start`,
+                  }}
+                >
+                  <Link href={article.url}>
+                    <h2>{article.title}</h2>
+                    <img
+                      style={{ maxWidth: `100%` }}
+                      src={article.image}
+                      alt=""
+                    />
+                    <p>{article.tagline}</p>
+                    <p>{transformDate(article.publicationDate)}</p>
+                  </Link>
+                </div>
+              </>
+            );
+          })
+        ) : (
+          <h2>no articles to show</h2>
+        )}
+      </div>
+    </div>
   );
 }
 
