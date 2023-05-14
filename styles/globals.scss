@@ -637,10 +637,11 @@ nav {
 }
 
 #lightbox {
-  width: 100vw;
+  // width: 100vw;
   height: 100vh;
   background-color: hsl(0, 0%, 95%);
-  position: fixed;
+  // position: relative;
+  align-self: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -660,12 +661,17 @@ nav {
   // top: 1em;
   // right: 1em;
   border: none;
-
+  background-color: hsl(0, 0%, 95%);
   transition: 0.3s;
   cursor: pointer;
   &:hover {
     border-radius: 1em;
   }
+}
+
+.lightbox-buttons-pressed {
+  background-color: hsl(0, 0%, 95%);
+  transition: 0.3s;
 }
 .arrow-buttons {
   // padding-left: 5em;
@@ -678,12 +684,14 @@ nav {
 }
 
 #prev-button {
+  width: 10vw;
   &:hover {
     background-color: white;
     transform: translateX(-1rem);
   }
 }
 #next-button {
+  width: 10vw;
   &:hover {
     background-color: white;
     transform: translateX(1rem);

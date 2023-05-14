@@ -13,7 +13,14 @@ export default function Media(props) {
   });
 
   return (
-    <div style={{ backgroundColor: `#f2f2f2`, padding: `1em` }}>
+    <div
+      style={{
+        backgroundColor: `#f2f2f2`,
+        paddingLeft: `10em`,
+        paddingRight: `10em`,
+        paddingTop: `5em`,
+      }}
+    >
       {props.gallery[0].images && (
         <MasonryImageGallery gallery={props.gallery[0].images} />
       )}

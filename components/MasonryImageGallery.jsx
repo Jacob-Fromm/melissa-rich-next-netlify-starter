@@ -6,6 +6,9 @@ import imageUrlBuilder from "@sanity/image-url";
 export default function MasonryImageGallery({ gallery }) {
   const [data, setData] = useState(0);
   const [modal, setModal] = useState(false);
+  const [lightboxButtonPressed, setLightBoxButtonPressed] = useState(
+    "lightbox-buttons arrow-buttons"
+  );
 
   const viewImage = (index) => {
     setData(index);
@@ -24,6 +27,12 @@ export default function MasonryImageGallery({ gallery }) {
       return imgAction("next-img");
     }
   };
+
+  const keyUpHandler = (event) => {
+    event.preventDefault();
+    console.log(event);
+  };
+
   useEffect(() => {
     document.addEventListener("keydown", keyDownHandler);
     return () => {
@@ -31,9 +40,17 @@ export default function MasonryImageGallery({ gallery }) {
     };
   }, []);
 
+  useEffect(() => {
+    document.addEventListener("keyup", keyUpHandler);
+    return () => {
+      document.removeEventListener("keyup", keyUpHandler);
+    };
+  }, []);
+
   const imgAction = (action) => {
     if (action === "next-img") {
       setData((i) => (i + 1 > gallery.length - 1 ? 0 : i + 1));
+      setLightBoxButtonPressed("lightbox-buttons-pressed arrow-buttons");
     } else if (action === "prev-img") {
       setData((i) => (i - 1 < 0 ? gallery.length - 1 : i - 1));
     } else if (action === "escape") {
@@ -42,7 +59,7 @@ export default function MasonryImageGallery({ gallery }) {
     }
   };
 
-  console.log("data outside functions: ", data);
+  console.log("lightbox outside functions: ", lightboxButtonPressed);
   return (
     <>
       {modal && (
