@@ -1,21 +1,23 @@
 import { client } from "../util/client";
 import Link from "next/link";
 
-export default function Writing({ sanityArticles }) {
+export default function Writing({ articles }) {
   callNewArticles();
-  console.log("sanity articles in writing page :", sanityArticles);
+  console.log("sanity articles in writing page :", articles);
   return (
     <div
       style={{
         display: `flex`,
         flexDirection: `column`,
         justifyItems: `center`,
+        backgroundColor: `cyan`,
+        padding: `1em`,
+        margin: `2em`,
       }}
     >
-      <h1>articles</h1>
       <div className="writing-container">
-        {sanityArticles ? (
-          sanityArticles.map((article) => {
+        {articles ? (
+          articles.map((article) => {
             return (
               <>
                 <div
@@ -26,9 +28,8 @@ export default function Writing({ sanityArticles }) {
                     marginLeft: `1em`,
                     marginRight: `1em`,
                     padding: `1em`,
-                    border: `1px solid blue`,
                     backgroundColor: `limegreen`,
-                    width: `40vw`,
+                    width: `30vw`,
                     justifyContent: `flex-start`,
                   }}
                 >
@@ -65,7 +66,6 @@ const callNewArticles = () => {
       let transaction = client.transaction();
       articles.forEach((article) => {
         transaction.createOrReplace(article);
-        console.log("transaction completed :", article);
       });
       return transaction.commit();
     });
@@ -93,11 +93,11 @@ const transformDate = (datetime) => {
   return date.toLocaleDateString("en-US", options);
 };
 export async function getStaticProps() {
-  const sanityArticles = await client.fetch(`*[_type == "writingNylon"]`);
+  const articles = await client.fetch(`*[_type == "writingNylon"]`);
 
   return {
     props: {
-      sanityArticles,
+      articles,
     },
   };
 }

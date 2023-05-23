@@ -4,14 +4,13 @@ import { client } from "../util/client";
 import { PortableText } from "@portabletext/react";
 
 export default function Events({ events }) {
-  console.log("events in events page :", events);
   return (
     <div className="container">
       {events.length > 0 && (
         <ul className="project-card-container">
           {events.map((event) => (
             <a href={event.url}>
-              <li className="project-card" key={event._id}>
+              <li className="project-card event-card" key={event._id}>
                 <div className="project-title-and-description">
                   <h2 id="event-title">{event?.name}</h2>
                   <h3 style={{ paddingBottom: `0.25em` }} id="event-venue">
@@ -27,7 +26,6 @@ export default function Events({ events }) {
         </ul>
       )}
       {!events.length > 0 && <p>No events to show</p>}
-      {events.length > 0 && console.log(JSON.stringify(events, null, 2))}
       {!events.length > 0 && (
         <div>
           <div>¯\_(ツ)_/¯</div>
