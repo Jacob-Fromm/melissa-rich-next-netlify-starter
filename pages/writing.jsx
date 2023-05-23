@@ -5,52 +5,29 @@ export default function Writing({ articles }) {
   callNewArticles();
   console.log("sanity articles in writing page :", articles);
   return (
-    <div
-      style={{
-        display: `flex`,
-        flexDirection: `column`,
-        justifyItems: `center`,
-        backgroundColor: `cyan`,
-        padding: `1em`,
-        margin: `2em`,
-      }}
-    >
-      <div className="writing-container">
-        {articles ? (
-          articles.map((article) => {
-            return (
-              <>
-                <div
-                  className="writing-item"
-                  style={{
-                    display: `flex`,
-                    flexDirection: `column`,
-                    marginLeft: `1em`,
-                    marginRight: `1em`,
-                    padding: `1em`,
-                    backgroundColor: `limegreen`,
-                    width: `30vw`,
-                    justifyContent: `flex-start`,
-                  }}
-                >
-                  <Link href={article.url}>
-                    <h2>{article.title}</h2>
-                    <img
-                      style={{ maxWidth: `100%` }}
-                      src={article.image}
-                      alt=""
-                    />
-                    <p>{article.tagline}</p>
-                    <p>{transformDate(article.publicationDate)}</p>
-                  </Link>
-                </div>
-              </>
-            );
-          })
-        ) : (
-          <h2>no articles to show</h2>
-        )}
-      </div>
+    <div className="writing-container">
+      {articles ? (
+        articles.map((article) => {
+          return (
+            <>
+              <div className="writing-item">
+                <Link href={article.url}>
+                  <h2>{article.title}</h2>
+                  <img
+                    style={{ maxWidth: `100%` }}
+                    src={article.image}
+                    alt=""
+                  />
+                  <p>{article.tagline}</p>
+                  <p>{transformDate(article.publicationDate)}</p>
+                </Link>
+              </div>
+            </>
+          );
+        })
+      ) : (
+        <h2>no articles to show</h2>
+      )}
     </div>
   );
 }

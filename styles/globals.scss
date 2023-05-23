@@ -745,17 +745,33 @@ nav {
 }
 
 .writing-container {
-  justify-content: center;
   display: grid;
-  grid-template-columns: 30vw 30vw 30vw;
-  grid-gap: 1rem;
+  width: 90vw;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 0.25rem;
   justify-items: center;
+  background-color: cyan;
+  padding: 1em;
+  // margin: 2em;
 }
 
 .writing-item {
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  // margin: 0 1em 0 1em;
+  padding: 1em;
+  background-color: limegreen;
+  width: 20em;
+  justify-content: flex-start;
+  margin: 0.5em;
   transition: 0.2s;
   &:hover {
     box-shadow: 0.25em 0.25em #e02cac;
+  }
+  @media screen and (max-width: 320px) {
+    width: 30em;
   }
 }
 // every-layout layouts
