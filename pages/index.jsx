@@ -59,12 +59,12 @@ export default function IndexPage({
           <br />
         </div>
         <div className="index-section-container">
-          <h1>projects</h1>
-          <Projects projects={projects} />
-        </div>
-        <div className="index-section-container">
           <h1>events</h1>
           <Events events={events} />
+        </div>
+        <div className="index-section-container">
+          <h1>projects</h1>
+          <Projects projects={projects} />
         </div>
       </main>
     </div>

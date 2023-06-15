@@ -4,6 +4,7 @@ import { client } from "../util/client";
 import { PortableText } from "@portabletext/react";
 
 export default function Events({ events }) {
+  console.log(events);
   return (
     <div className="container">
       {events.length > 0 && (
@@ -16,7 +17,7 @@ export default function Events({ events }) {
                   <h3 style={{ paddingBottom: `0.25em` }} id="event-venue">
                     {event?.venue}
                   </h3>
-                  <p id="event-date">{event.date}</p>
+                  <p id="event-date">{transformDate(event.date)}</p>
                   <PortableText value={event?.description} />
                 </div>
                 <img src={urlFor(event.image).auto("format").url()} />
@@ -44,6 +45,18 @@ const builder = imageUrlBuilder(client);
 function urlFor(source) {
   return builder.image(source);
 }
+
+const transformDate = (datetime) => {
+  let options = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+
+  let date = new Date(datetime);
+  return date.toLocaleDateString("en-US", options);
+};
+
 export async function getStaticProps() {
   const events = await client.fetch(`*[_type == "event"]`);
 

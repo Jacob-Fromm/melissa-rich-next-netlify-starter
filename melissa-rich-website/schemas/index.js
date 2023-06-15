@@ -9,6 +9,7 @@ import event from './event'
 import venue from './venue'
 import organizer from './organizer'
 import writingNylon from './writingNylon'
+import socials from './socials'
 export const schemaTypes = [
   project,
   photo,
@@ -21,4 +22,5 @@ export const schemaTypes = [
   venue,
   organizer,
   writingNylon,
+  socials,
 ]

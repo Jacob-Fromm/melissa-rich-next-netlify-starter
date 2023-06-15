@@ -19,6 +19,7 @@ export default {
       validation: (Rule) => Rule.required(),
       options: {
         dateFormat: 'MMMM D, YYYY',
+        timeFormat: ' ',
       },
     },
     {
@@ -63,11 +64,6 @@ export default {
   ],
   orderings: [
     {
-      title: 'Event name',
-      name: 'eventNameAsc',
-      by: [{field: 'name', direction: 'asc'}],
-    },
-    {
       title: 'Event date',
       name: 'eventDateDesc',
       by: [{field: 'date', direction: 'desc'}],
@@ -76,8 +72,8 @@ export default {
   preview: {
     select: {
       title: 'name',
-      subtitle: 'date',
       media: 'image',
+      subtitle: 'date',
     },
   },
 }

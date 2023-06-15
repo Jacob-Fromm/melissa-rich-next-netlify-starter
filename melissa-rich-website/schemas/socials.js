@@ -1,25 +1,9 @@
 export default {
-  name: 'bio',
-  type: 'document',
-  title: 'Bio',
+  name: 'socialMedia',
+  type: 'object',
+  title: 'Social Medias',
   fieldsets: [{name: 'socials', title: 'Socials'}],
   fields: [
-    {
-      name: 'headline',
-      type: 'string',
-      title: 'Headline',
-    },
-    {
-      title: 'Full Bio',
-      name: 'fullBio',
-      type: 'array',
-      of: [{type: 'block'}],
-    },
-    {
-      title: 'Bio Photo',
-      name: 'photo',
-      type: 'photo',
-    },
     {
       title: 'Twitter',
       name: 'twitter',

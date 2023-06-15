@@ -4,8 +4,10 @@ import imageUrlBuilder from "@sanity/image-url";
 import { PortableText } from "@portabletext/react";
 
 export default function Bio({ bio }) {
-  console.log(bio[0].photo);
+  console.log(bio);
+  console.log(bio[0].tiktok);
   let bioBackgroundImage = urlFor(bio[0].photo).url();
+
   return (
     <div
       className="bio-container"
@@ -23,6 +25,37 @@ export default function Bio({ bio }) {
           <h2 style={{ color: `white` }}>{bio[0].headline}</h2>
           <div className="bio-text">
             <PortableText className="bio-text-text" value={bio[0].fullBio} />
+            <div
+              className="bio-socials"
+              style={{
+                display: `flex`,
+                flexDirection: `row`,
+                justifyContent: `center`,
+                border: `1px solid white`,
+              }}
+            >
+              {bio[0].tiktok ? (
+                <a href={bio[0].tiktok} target="_blank">
+                  <p>TikTok | </p>
+                </a>
+              ) : (
+                ""
+              )}
+              {bio[0].instagram ? (
+                <a href={bio[0].instagram} target="_blank">
+                  <p>Instagram | </p>
+                </a>
+              ) : (
+                ""
+              )}
+              {bio[0].email ? (
+                <a href={`mailto:${bio[0].email}`} target="_blank">
+                  <p>Email me!</p>
+                </a>
+              ) : (
+                ""
+              )}
+            </div>
           </div>
           <img src="assets/envelope.jpg" alt="" />
           {/* <img src={urlFor(bio[0].photo).auto("format").fit("fill").url()}
