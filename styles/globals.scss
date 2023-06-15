@@ -536,6 +536,14 @@ h2 {
   }
 }
 
+.bio-socials {
+  p {
+    &:hover {
+      color: yellow;
+    }
+  }
+}
+
 .bio-container {
   // display: flex;
   // flex-direction: row;
