@@ -11,47 +11,31 @@ export default function Bio({ bio }) {
   return (
     <div
       className="bio-container"
-      style={{
-        height: `100vh`,
-        width: `100vw`,
-        backgroundImage: `url(${bioBackgroundImage})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
+      style={{ backgroundImage: `url(${bioBackgroundImage})` }}
     >
       {bio.length > 0 && (
         <div className="bio-text-container">
           <h2 style={{ color: `white` }}>{bio[0].headline}</h2>
           <div className="bio-text">
             <PortableText className="bio-text-text" value={bio[0].fullBio} />
-            <div
-              className="bio-socials"
-              style={{
-                display: `flex`,
-                flexDirection: `row`,
-                justifyContent: `center`,
-                border: `1px solid white`,
-                marginTop: `1rem`,
-              }}
-            >
+            <div className="bio-socials" style={{}}>
               {bio[0].tiktok ? (
                 <a href={bio[0].tiktok} target="_blank">
-                  <p>TikTok | </p>
+                  <p>\ TikTok /</p>
                 </a>
               ) : (
                 ""
               )}
               {bio[0].instagram ? (
                 <a href={bio[0].instagram} target="_blank">
-                  <p>Instagram | </p>
+                  <p>\ Instagram /</p>
                 </a>
               ) : (
                 ""
               )}
               {bio[0].email ? (
                 <a href={`mailto:${bio[0].email}`} target="_blank">
-                  <p>Email me!</p>
+                  <p>\ Email me! /</p>
                 </a>
               ) : (
                 ""
