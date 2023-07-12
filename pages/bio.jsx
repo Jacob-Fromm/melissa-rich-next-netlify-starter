@@ -32,6 +32,7 @@ export default function Bio({ bio }) {
                 flexDirection: `row`,
                 justifyContent: `center`,
                 border: `1px solid white`,
+                marginTop: `1rem`,
               }}
             >
               {bio[0].tiktok ? (
