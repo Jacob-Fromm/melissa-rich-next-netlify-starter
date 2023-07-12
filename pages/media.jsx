@@ -3,6 +3,7 @@ import { client } from "util/client";
 import imageUrlBuilder from "@sanity/image-url";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import MasonryImageGallery from "@components/MasonryImageGallery.jsx";
+import VideoEmbed from "../components/VideoEmbed";
 
 export default function Media(props) {
   console.log("media page props: ", props.gallery[0]);
@@ -12,6 +13,12 @@ export default function Media(props) {
     vidoes: [],
   });
 
+  // if (props) {
+  //   setMedia({
+  //     images: props.gallery[0].images,
+  //     videoLinks: props.gallery[0].videoLinks,
+  //   });
+  // }
   return (
     <div
       style={{
@@ -20,6 +27,7 @@ export default function Media(props) {
         paddingTop: `5em`,
       }}
     >
+      <h1 style={{ color: `black`, opacity: `80%` }}>photos</h1>
       {props.gallery[0].images && (
         <MasonryImageGallery gallery={props.gallery[0].images} />
       )}
@@ -41,7 +49,21 @@ export default function Media(props) {
           )}
         </Masonry>
       </ResponsiveMasonry> */}
-      <h3>videos</h3>
+
+      <h1
+        style={{
+          color: `black`,
+          opacity: `80%`,
+          paddingBottom: `1em`,
+        }}
+      >
+        videos
+      </h1>
+      {props.gallery[0].videoLinks &&
+        props.gallery[0].videoLinks.map((vid) => {
+          return <VideoEmbed videoUrl={vid} />;
+          // <MasonryImageGallery gallery={props.gallery[0].videoLinks} />;
+        })}
     </div>
   );
 }

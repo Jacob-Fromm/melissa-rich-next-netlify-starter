@@ -750,8 +750,26 @@ nav {
 }
 
 .masonry-modal {
-  width: 100%;
+  position: fixed;
+  width: 100vw;
+  height: 10vh;
+  z-index: 1000;
   color: blue;
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .events-container {
