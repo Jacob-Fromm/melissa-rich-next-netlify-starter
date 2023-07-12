@@ -63,7 +63,7 @@ export default function MasonryImageGallery({ gallery }) {
   return (
     <>
       {modal && (
-        <>
+        <div className="masonry-modal">
           <button
             id="escape-button"
             onClick={() => imgAction("escape")}
@@ -88,9 +88,9 @@ export default function MasonryImageGallery({ gallery }) {
               &#62;
             </button>
           </div>
-        </>
+        </div>
       )}
-      <div>
+      <div style={{ padding: `2.5em` }}>
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
           <Masonry gutter="0.5rem">
             {gallery.map((image, i) => (

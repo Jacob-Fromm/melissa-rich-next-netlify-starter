@@ -16,8 +16,7 @@ export default function Media(props) {
     <div
       style={{
         backgroundColor: `#f2f2f2`,
-        paddingLeft: `10em`,
-        paddingRight: `10em`,
+        padding: `2.5em`,
         paddingTop: `5em`,
       }}
     >

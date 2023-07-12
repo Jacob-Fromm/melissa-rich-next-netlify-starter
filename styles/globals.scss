@@ -670,7 +670,9 @@ nav {
 
 #lightbox {
   // width: 100vw;
-  height: 100vh;
+  position: fixed;
+  height: 100%;
+  width: 100%;
   background-color: hsl(0, 0%, 95%);
   // position: relative;
   align-self: center;
@@ -730,7 +732,7 @@ nav {
   }
 }
 #escape-button {
-  position: absolute;
+  position: fixed;
   top: 8em;
   right: 1em;
   cursor: pointer;
@@ -745,6 +747,11 @@ nav {
 
 .masonry-container {
   padding: 0.5rem;
+}
+
+.masonry-modal {
+  width: 100%;
+  color: blue;
 }
 
 .events-container {
